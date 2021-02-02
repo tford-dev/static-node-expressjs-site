@@ -1,0 +1,49 @@
+{
+    "projects": [
+        {
+            "id": 0,
+            "project_name": "Random Quote Generator",
+            "description": "A random quote generator that cycles through an array of quotes and displays them onto DOM automatically",
+            "technologies": ["HTML5", "CSS3", "JavaScript"],
+            "live_link": "To be determined",
+            "github_link": "https://github.com/tford-dev/techDegree-Project1",
+            "image_url": ["../img/rqg1.png", "../img/rqg2.png"]
+        },
+        {
+            "id": 1,
+            "project_name": "Data Pagination",
+            "description": "Displays 9 employees on one page that allows users to cycle through employees 9 at a time while on the same page.",
+            "technologies": ["HTML5", "CSS3", "JavaScript"],
+            "live_link": "To be determined",
+            "github_link": "https://github.com/tford-dev/techDegreeProject2",
+            "image_url": ["../img/datapag1.png", "../img/datapag2.png"]
+        },
+        {
+            "id": 2,
+            "project_name": "Interactive Form",
+            "description": "Web form that is responsive to user input in real time",
+            "technologies": ["HTML5", "CSS3", "JavaScript"],
+            "live_link": "To be determined",
+            "github_link": "https://github.com/tford-dev/techDegreeProject3",
+            "image_url": ["../img/intform1.png", "../img/intform2.png"]
+        },
+        {
+            "id": 3,
+            "project_name": "Object Oriented Game Show",
+            "description": "Project that is made with ES6 object oriented programming. Allows user to input letters with mouse or keyboard to guess letters of a random phrase.",
+            "technologies": ["HTML5", "CSS3", "JavaScript"],
+            "live_link": "To be determined",
+            "github_link": "https://github.com/tford-dev/techDegreeProject4",
+            "image_url": ["../img/oopGame1.png", "../img/oopGame2.png"]
+        },
+        {
+            "id": 4,
+            "project_name": "Public API Requests",
+            "description": "Project that uses randomuser api. Displays 12 people and allows user to toggle between each person as well as search each person by name, location, or birthday .",
+            "technologies": ["HTML5", "CSS3", "JavaScript", "Node.js", "RandomAPI (randomuser.me)"],
+            "live_link": "To be determined",
+            "github_link": "https://github.com/tford-dev/techDegreeProject5",
+            "image_url": ["../img/apiList1.png", "../img/apiList2.png"]
+        }
+    ]
+}
