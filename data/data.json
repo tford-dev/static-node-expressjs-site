@@ -7,7 +7,7 @@
             "technologies": ["HTML5", "CSS3", "JavaScript"],
             "live_link": "To be determined",
             "github_link": "https://github.com/tford-dev/techDegree-Project1",
-            "image_url": ["../img/rqg1.png", "../img/rqg2.png"]
+            "image_url": ["/img/rqg1.png", "/img/rqg2.png"]
         },
         {
             "id": 1,
@@ -16,7 +16,7 @@
             "technologies": ["HTML5", "CSS3", "JavaScript"],
             "live_link": "To be determined",
             "github_link": "https://github.com/tford-dev/techDegreeProject2",
-            "image_url": ["../img/datapag1.png", "../img/datapag2.png"]
+            "image_url": ["/img/datapag1.png", "/img/datapag2.png"]
         },
         {
             "id": 2,
@@ -25,7 +25,7 @@
             "technologies": ["HTML5", "CSS3", "JavaScript"],
             "live_link": "To be determined",
             "github_link": "https://github.com/tford-dev/techDegreeProject3",
-            "image_url": ["../img/intform1.png", "../img/intform2.png"]
+            "image_url": ["/img/intform1.png", "/img/intform2.png"]
         },
         {
             "id": 3,
@@ -34,7 +34,7 @@
             "technologies": ["HTML5", "CSS3", "JavaScript"],
             "live_link": "To be determined",
             "github_link": "https://github.com/tford-dev/techDegreeProject4",
-            "image_url": ["../img/oopGame1.png", "../img/oopGame2.png"]
+            "image_url": ["/img/oopGame1.png", "/img/oopGame2.png"]
         },
         {
             "id": 4,
@@ -43,7 +43,7 @@
             "technologies": ["HTML5", "CSS3", "JavaScript", "Node.js", "RandomAPI (randomuser.me)"],
             "live_link": "To be determined",
             "github_link": "https://github.com/tford-dev/techDegreeProject5",
-            "image_url": ["../img/apiList1.png", "../img/apiList2.png"]
+            "image_url": ["/img/apiList1.png", "/img/apiList2.png"]
         }
     ]
 }
