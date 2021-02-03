@@ -1,8 +1,6 @@
 const express = require("express");
-// USE THIS FOR ROUTES IN OTHER FILES const router = express.Router();
 const path = require("path");
 const bodyParser = require("body-parser");
-const pug = require("pug");
 const {projects} = require("./data/data.json");
 const app = express();
 
@@ -33,6 +31,21 @@ app.get("/projects/:id", (req, res, next) =>{
     } else {
         res.sendStatus(404);
     }
+});
+
+app.use((req, res, next) => {
+  console.log('404 error handler called');
+  res.status(404).render('not-found');
+});
+
+app.use((err, req, res, next) => {
+    if (err) {
+    console.log('Global error handler called', err);
+    } 
+    if(err.status === 404){
+    res.status(404).render('not-found', { err });
+    res.status(err.status || 500).render('error', { err });
+  }
 });
 
 app.listen(3000, ()=>{
