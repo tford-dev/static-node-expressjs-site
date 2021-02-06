@@ -4,7 +4,6 @@ const bodyParser = require("body-parser");
 const {projects} = require("./data/data.json");
 const app = express();
 const morgan = require("morgan");
-const { read } = require("fs");
 
 //Setup for view engine
 app.set('views', path.join(__dirname, 'views'));
