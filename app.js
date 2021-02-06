@@ -3,6 +3,8 @@ const path = require("path");
 const bodyParser = require("body-parser");
 const {projects} = require("./data/data.json");
 const app = express();
+const morgan = require("morgan");
+const { read } = require("fs");
 
 //Setup for view engine
 app.set('views', path.join(__dirname, 'views'));
@@ -12,6 +14,7 @@ app.set('view engine', 'pug');
 app.use(express.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use('/static', express.static('public/'));
+app.use(morgan('dev'));
 
 
 app.get("/", (req, res)=>{
@@ -34,18 +37,8 @@ app.get("/projects/:id", (req, res, next) =>{
 });
 
 app.use((req, res, next) => {
-  console.log('404 error handler called');
-  res.status(404).render('not-found');
-});
-
-app.use((err, req, res, next) => {
-    if (err) {
-    console.log('Global error handler called', err);
-    } 
-    if(err.status === 404){
-    res.status(404).render('not-found', { err });
-    res.status(err.status || 500).render('error', { err });
-  }
+    console.log("Error has occured, page not found.")
+    res.status(404).render('not-found');
 });
 
 app.listen(3000, ()=>{
