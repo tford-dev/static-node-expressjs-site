@@ -12,6 +12,7 @@ document.querySelector('#menu-icon').addEventListener('click', e => {
   return headerBtnClicked = !headerBtnClicked;
 });
 
+//Event listener so that dark mode can be added to app. This simply swaps between dark-styles.css and styles.css stylesheets in layout.pug
 document.querySelector(".about-anchor").nextElementSibling.addEventListener("click", (event)=>{
   if(event.target.innerText === "DARK MODE"){
     document.getElementById("styles").setAttribute("href", "/static/css/dark-styles.css");

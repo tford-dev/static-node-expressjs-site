@@ -41,6 +41,7 @@ app.use((req, res, next) => {
     res.status(404).render('not-found');
 });
 
+//Added node app.js to package.json so that server can be started with "npm start"
 app.listen(3000, ()=>{
     console.log("Running on port 3000");
 });
