@@ -16,6 +16,7 @@ app.use(morgan('dev'));
 //route for home page
 app.get("/", (req, res)=>{
     res.render("index.pug", { projects });
+    console.log('Cookies: ', req.cookies)
 });
 
 //route for about page, learn more button activates opens this

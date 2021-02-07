@@ -22,7 +22,7 @@ body {
   line-height: 1.5;
   color: #fefefe;
   background: #0a0a0a;
-  background: #fff;
+  background: #183c5c;
   transform: translateX(0px);
   transition: all 0.4s ease-out;
 }
@@ -137,7 +137,7 @@ nav a span {
   height: 100%;
   min-height: 100%;
   padding: 20px;
-  background: #fff;
+  background: #183c5c;
 }
 
 .sidebar-info-box {
@@ -151,7 +151,7 @@ nav a span {
 .sidebar .thumbnail {
   width: 100%;
   max-width: 250px;
-  border: 4px solid #000;
+  border: 4px solid #999;
 }
 
 .dev-intro-box {
@@ -159,7 +159,7 @@ nav a span {
 }
 
 .sidebar h5 {
-  color: #0a0a0a;
+  color: #fefefe;
   margin: 0 auto 0.5rem;
 }
 
@@ -176,7 +176,7 @@ nav a span {
   font-size: 13px;
   letter-spacing: 2.5px;
   text-transform: uppercase;
-  color: #555;
+  color: #fefefe;
 }
 
 .header {
