@@ -3,7 +3,7 @@
         {
             "id": 0,
             "project_name": "Random Quote Generator",
-            "description": "A random quote generator that cycles through an array of quotes and displays them onto DOM automatically",
+            "description": "A random quote generator that cycles through an array of quotes and displays them onto DOM automatically.",
             "technologies": ["HTML5", "CSS3", "JavaScript"],
             "live_link": "https://tford-dev.github.io/randomQuoteGenerator/",
             "github_link": "https://github.com/tford-dev/randomQuoteGenerator",

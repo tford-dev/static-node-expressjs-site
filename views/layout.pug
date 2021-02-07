@@ -7,14 +7,14 @@ html(lang="en" dir="ltr")
     title Portfolio Site
     link(href='https://fonts.googleapis.com/css?family=Merriweather:300,400,400i,700,800', rel='stylesheet')
     link(rel='stylesheet', href='/static/css/normalize.css')
-    link(rel='stylesheet', href='/static/css/styles.css')
+    link#styles(rel='stylesheet', href='/static/css/styles.css')
 
   body
     #my-info.sidebar
       .sidebar-info-box
         br
         .thumbnail-box
-          img.thumbnail(src='../static/img/gitpic.jpg', alt='')
+          img.thumbnail(src='../static/img/gitpic.jpg', alt='photo of Terrance Ford' width="250" height="250")
         .dev-intro-box
 
           //- Replace with your name
@@ -24,7 +24,9 @@ html(lang="en" dir="ltr")
           p I'm a 24 year old web deveoloper located in Glen Allen, Virginia.
 
           //- Add path from your '/about' route handler to the href below
-          a(href='/about') Learn More &rarr;
+          a.about-anchor(href='/about') Learn More &rarr;
+
+          button.dark-mode Dark Mode
 
     .wrapper
       .header
@@ -32,7 +34,7 @@ html(lang="en" dir="ltr")
           button#menu-icon.menu-icon(type='button' data-toggle='my-info')
 
           //- Replace with your name — this is for the mobile layout
-          span Name
+          span Terrance Ford
 
       block content
 
