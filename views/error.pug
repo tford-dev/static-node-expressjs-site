@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  nav.nav
+    a(href='/')
+      span &larr;
+      |  Back
+
+  article.portfolio-intro
+    h1 Uh-oh, there was an error with the server. Refresh page or try again later.
+    h2 #{err.status}
+    p #{err.stack}
+

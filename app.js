@@ -16,7 +16,6 @@ app.use(morgan('dev'));
 //route for home page
 app.get("/", (req, res)=>{
     res.render("index.pug", { projects });
-    console.log('Cookies: ', req.cookies)
 });
 
 //route for about page, learn more button activates opens this
@@ -31,7 +30,9 @@ app.get("/projects/:id", (req, res, next) =>{
     if(project){
         res.render("project.pug", { project });
     } else {
-        res.sendStatus(404);
+        const err = new Error();
+        err.status = 404;
+        next(err);
     }
 });
 
@@ -40,6 +41,21 @@ app.use((req, res, next) => {
     console.log("Error has occured, page not found.")
     res.status(404).render('not-found');
 });
+
+//Global error handler for the app.
+app.use((err, req, res, next) => {
+  if (err) {
+    console.log('Global error handler called', err);
+  };
+  if(err.status === 404){
+    console.log("Error has occured, page not found.")
+    res.status(404).render('not-found', { err });
+  } else {
+    err.message = err.message || `Uh-oh, there was an error with the server. Refresh page or try again later.`
+    res.status(err.status || 500).render('error', { err });
+  }
+});
+
 
 //Added node app.js to package.json so that server can be started with "npm start"
 app.listen(3000, ()=>{
