@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+html(lang="en" dir="ltr")
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='x-ua-compatible', content='ie=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title Terrance Ford | Portfolio Site
+    <link rel="shortcut icon" type="image/icon" href="static/img/favicon.ico">
+    link(href='https://fonts.googleapis.com/css?family=Merriweather:300,400,400i,700,800', rel='stylesheet')
+    link(rel='stylesheet', href='/static/css/normalize.css')
+    link#styles(rel='stylesheet', href='/static/css/styles.css')
+
+  body
+    #my-info.sidebar
+      .sidebar-info-box
+        br
+        .thumbnail-box
+          img.thumbnail(src='../static/img/gitpic.jpg', alt='photo of Terrance Ford' width="250" height="250")
+        .dev-intro-box
+
+          h5 Terrance Ford
+
+          p I'm a 24 year old web deveoloper located in Glen Allen, Virginia.
+
+          a.about-anchor(href='/about') Learn More &rarr;
+
+          button.dark-mode Dark Mode
+
+    .wrapper
+      .header
+        .header-info-box
+          button#menu-icon.menu-icon(type='button' data-toggle='my-info')
+
+          span Terrance Ford
+
+      block content
+
+  script(src='/static/js/script.js')
