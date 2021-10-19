@@ -53,6 +53,33 @@
             "live_link": "https://tforddev-color-guessing-game.herokuapp.com/",
             "github_link": "https://github.com/tford-dev/color-guessing-game",
             "image_url": ["static/img/color-guess-screenshot.png", "static/img/color-guess-screenshot1.png"]
+        },
+        {
+            "id" : 6,
+            "project_name": "React Gallery",
+            "description": "This is a react app for the 7th project in the TeamTreeHouse-Full-Stack-Javascript-Techdegree. The data used in this app comes from the Flickr API. The composition of this app is mostly class components but I did use React Hooks where I absolutely needed it. When navigating through this application, it does take 1-2 seconds before getting a response.",
+            "technologies": ["React Js", "JavaScript", "CSS3", "JSX", "React-Router", "Flickr API"],
+            "live_link": "https://reactgallerytford.netlify.app/",
+            "github_link": "https://github.com/tford-dev/react-gallery",
+            "image_url": ["static/img/reactgallery0.png", "static/img/reactgallery1.png", "static/img/reactgallery2.png"]
+        },
+        {
+            "id" : 7,
+            "project_name": "Sql Data Manager",
+            "description": "This is the 8th project of the TeamTreehouse-Full-Stack-Javascript-Techdegree. This project uses Sequelize as a method of managing an SQL database. This is a CRUD app for managing data of books for a library. The user can also paginate through books in the database in the /books route.",
+            "technologies": ["HTML5", "CSS3", "JavaScript", "Sequelize", "SQLite", "Jade", "Express"],
+            "live_link": "https://sqldatamanger-by-tford.herokuapp.com/books",
+            "github_link": "https://github.com/tford-dev/sqlDataManager/blob/master/package.json",
+            "image_url": ["static/img/sqldataman0.png", "static/img/sqldataman1.png", "static/img/sqldataman2.png", "static/img/sqldataman3.png", "static/img/sqldataman4.png"]
+        },
+        {
+            "id" : 8,
+            "project_name": "Full Stack React CRUD App",
+            "description": "This is the 9th & 10th project of the TeamTreehouse-Full-Stack-Javascript-Techdegree. This is a React CRUD app for courses with a fully functional user authorization feature. The REST API used for this App was crafted with Node, Sequelize, and Express. The frontend(client side) was made with React Js.",
+            "technologies": ["JSX", "CSS3", "JavaScript", "Node", "Express", "SQLite", "React Js", "React-Router"],
+            "live_link": "https://616df32de344743f0b34ff40--react-courses-tford.netlify.app/",
+            "github_link": "https://github.com/tford-dev/react-restApiSql https://github.com/tford-dev/restApiSql",
+            "image_url": ["static/img/fullstack0.png", "static/img/fullstack1.png", "static/img/fullstack2.png", "static/img/fullstack3.png", "static/img/fullstack4.png", "static/img/fullstack5.png"]
         }
     ]
 }
