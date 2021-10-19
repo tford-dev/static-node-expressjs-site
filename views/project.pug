@@ -25,9 +25,10 @@ block content
         a.btn-link(href=`${project.github_link}` target="_blank") GitHub Repo
 
     .project-img-box.box
-
-      img.project-img(src=`../${project.image_url[0]}` alt=`${project.project_name} image 1`)
-      img.project-img(src=`../${project.image_url[1]}` alt=`${project.project_name} image 2`)
+      each image_url in project.image_url
+        img.project-img(src=`../${image_url}` alt=`${project.project_name}`)
+        //- img.project-img(src=`../${project.image_url[0]}` alt=`${project.project_name} image 1`)
+        //- img.project-img(src=`../${project.image_url[1]}` alt=`${project.project_name} image 2`)
 
     nav.nav
       a(href='/')

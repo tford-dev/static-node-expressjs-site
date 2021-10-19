@@ -75,10 +75,10 @@
         {
             "id" : 8,
             "project_name": "Full Stack React CRUD App",
-            "description": "This is the 9th & 10th project of the TeamTreehouse-Full-Stack-Javascript-Techdegree. This is a React CRUD app for courses with a fully functional user authorization feature. The REST API used for this App was crafted with Node, Sequelize, and Express. The frontend(client side) was made with React Js.",
+            "description": "This is the 9th & 10th project of the TeamTreehouse-Full-Stack-Javascript-Techdegree. This is a React CRUD app for courses with a fully functional user authorization feature. The REST API used for this App was crafted with Node, Sequelize, and Express. The frontend(client side) was made with React Js. The git repo for the backend of this app is https://github.com/tford-dev/restApiSql",
             "technologies": ["JSX", "CSS3", "JavaScript", "Node", "Express", "SQLite", "React Js", "React-Router"],
             "live_link": "https://616df32de344743f0b34ff40--react-courses-tford.netlify.app/",
-            "github_link": "https://github.com/tford-dev/react-restApiSql https://github.com/tford-dev/restApiSql",
+            "github_link": "https://github.com/tford-dev/react-restApiSql",
             "image_url": ["static/img/fullstack0.png", "static/img/fullstack1.png", "static/img/fullstack2.png", "static/img/fullstack3.png", "static/img/fullstack4.png", "static/img/fullstack5.png"]
         }
     ]
