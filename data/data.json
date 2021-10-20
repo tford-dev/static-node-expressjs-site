@@ -66,7 +66,7 @@
         {
             "id" : 7,
             "project_name": "Sql Data Manager",
-            "description": "This is the 8th project of the TeamTreehouse-Full-Stack-Javascript-Techdegree. This project uses Sequelize as a method of managing an SQL database. This is a CRUD app for managing data of books for a library. The user can also paginate through books in the database in the /books route.",
+            "description": "This is the 8th project of the TeamTreehouse-Full-Stack-Javascript-Techdegree. This project uses Sequelize as a method of managing an SQL database. This is a CRUD app for managing data of books for a library. The user can also paginate through books in the database in the '/books' route.",
             "technologies": ["HTML5", "CSS3", "JavaScript", "Sequelize", "SQLite", "Jade", "Express"],
             "live_link": "https://sqldatamanger-by-tford.herokuapp.com/books",
             "github_link": "https://github.com/tford-dev/sqlDataManager/blob/master/package.json",
