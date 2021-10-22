@@ -12,7 +12,7 @@
         {
             "id": 1,
             "project_name": "Data Pagination",
-            "description": "This project displays 9 employees on one page that allows users to cycle through employees 9 at a time while on the same page.",
+            "description": "This project displays 9 employees on one page that allows users to cycle through 9 employees at a time while on the same page.",
             "technologies": ["HTML5", "CSS3", "JavaScript"],
             "live_link": "https://tford-dev.github.io/dataPagination/",
             "github_link": "https://github.com/tford-dev/dataPagination",
@@ -21,7 +21,7 @@
         {
             "id": 2,
             "project_name": "Interactive Form",
-            "description": "This project is web form that is responsive to user input in real time",
+            "description": "This project is a web form that is responsive to user input in real time.",
             "technologies": ["HTML5", "CSS3", "JavaScript"],
             "live_link": "https://tford-dev.github.io/interactiveForm/",
             "github_link": "https://github.com/tford-dev/interactiveForm",
