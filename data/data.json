@@ -29,13 +29,13 @@
             "image_url": ["static/img/task0.png", "static/img/task1.png", "static/img/task2.png", "static/img/task5.png", "static/img/task3.png", "static/img/task4.png"]
         },
         {
-            "id": 4,
+            "id": 3,
             "project_name": "React Spotify Design",
             "description": "This project utilizes the Spotify API. The user can sign in with their Spotify account and then view a playlist. The side bar displays playlists that the user has made on Spotify and the tracklist is pulled from the Spotify API. The purpose of this app was to practice front-end developement.",
             "technologies": ["HTML5", "React", "Context API", "CSS3", "JavaScript", "Spotify API"],
             "live_link": "https://61ca003bb5f4a26ed56c7e86--tford-dev-spotify.netlify.app/",
             "github_link": "https://github.com/tford-dev/spotify-clone",
-            "image_url": ["spot0.png", "spot1.png", "spot2.png", "spot3.png"]
+            "image_url": ["static/img/spot0.png", "static/img/spot1.png", "static/img/spot2.png", "static/img/spot3.png"]
         },
         {
             "id": 4,
