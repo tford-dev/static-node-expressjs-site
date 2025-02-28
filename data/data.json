@@ -4,7 +4,7 @@
             "id": 0,
             "project_name": "Full Stack React Workout-app",
             "description": "This web app is primarily made for mobile devices. A user can make an account with an email and 8-20 character password. The user can then sign in, create workouts, track sets, and enter in repetitions. Users can delete and update workouts/exercises as well. User passwords are encrypted with bcrypt. The API for this app is hosted on Heroku, the Postgres database is hosted on Neon, and the front of this app is hosted on Netlify.",
-            "technologies": ["HTML5", "CSS3", "JavaScript", "Express JS", "Node Js", "SQLite3", "Sequelize", "React JS", "Context API", "React-Router-v5"],
+            "technologies": ["HTML5", "CSS3", "JavaScript", "Express JS", "Node Js", "PostgreSQL", "Sequelize", "React JS", "Context API", "React-Router-v5"],
             "live_link": "https://workout-app-tford-dev.netlify.app/sign-in",
             "github_link": "https://github.com/tford-dev/workout-app-client",
             "image_url": ["static/img/WO3.png", "static/img/WO2.png", "static/img/WO1.png", "static/img/WO4.png", "static/img/WO5.png", "static/img/WO6.png", "static/img/WO7.png", "static/img/WO8.png", "static/img/WO9.png", "static/img/WO10.png", "static/img/WO11.png", "static/img/WO12.png"]
@@ -13,7 +13,7 @@
             "id": 1,
             "project_name": "Full Stack React Tasks/Notes App",
             "description": "This app was the first app I created after getting my tech degree from Treehouse. It is a CRUD app that users can track tasks in. A user can make an account with an email and 8-20 character password. The user can then sign in, create a task and then add in details such as a description, time, and date. Users can also edit and delete their tasks/to-dos. The API for this app is hosted on Heroku, the Postgres database is hosted on Neon, and the front of this app is hosted on Netlify.",
-            "technologies": ["HTML5", "JSX", "CSS3", "JavaScript", "Node Js", "Express", "SQL", "React Js", "React-Router"],
+            "technologies": ["HTML5", "CSS3", "JavaScript", "Express JS", "Node Js", "PostgreSQL", "Sequelize", "React JS", "Context API"],
             "live_link": "https://tasks-by-tforddev.netlify.app/",
             "github_link": "https://github.com/tford-dev/tasks-app",
             "image_url": ["static/img/task0.png", "static/img/task1.png", "static/img/task2.png", "static/img/task5.png", "static/img/task3.png", "static/img/task4.png"]
