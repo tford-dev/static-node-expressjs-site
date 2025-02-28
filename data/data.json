@@ -68,7 +68,7 @@
             "project_name": "Color Guessing Game",
             "description": "This rgb color guessing game was inspired by a project from a course I took, however all of the code was written by me. To play the game, you must click the correct square color based off the CSS rgb color numbers at the top of the screen. The score is determined by the difference between the number of squares clicked and the total squares on the screen, depending on the selected game mode.",
             "technologies": ["HTML5", "CSS3", "JavaScript", "Node.js"],
-            "live_link": "https://tforddev-color-guessing-game.herokuapp.com/",
+            "live_link": "https://tforddev-color-guessing-game-9832739a2a11.herokuapp.com/",
             "github_link": "https://github.com/tford-dev/color-guessing-game",
             "image_url": ["static/img/color-guess-screenshot.png", "static/img/color-guess-screenshot1.png"]
         },
