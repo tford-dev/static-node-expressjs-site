@@ -188,9 +188,11 @@ nav a span {
   border-left: 1px solid #fefefe;
 }
 
-.header span {
+.header a {
   display: inline-block;
   font-weight: bold;
+  text-decoration: none;
+  color: #0a0a0a;
 }
 
 .header button {
