@@ -1,38 +1,48 @@
-<!DOCTYPE html>
-html(lang="en" dir="ltr")
+doctype html
+html(lang="en")
   head
-    meta(charset='utf-8')
-    meta(http-equiv='x-ua-compatible', content='ie=edge')
-    meta(name='viewport', content='width=device-width, initial-scale=1.0')
-    title Terrance Ford | Portfolio Site
-    <link rel="shortcut icon" type="image/icon" href="../static/img/favicon.ico">
-    link(href='https://fonts.googleapis.com/css?family=Merriweather:300,400,400i,700,800', rel='stylesheet')
-    link(rel='stylesheet', href='/static/css/normalize.css')
-    link#styles(rel='stylesheet', href='/static/css/styles.css')
-
-  body
-    #my-info.sidebar
-      .sidebar-info-box
-        br
-        .thumbnail-box
-          img.thumbnail(src='../static/img/gitpic3.jpg', alt='photo of Terrance Ford' width="250" height="250")
-        .dev-intro-box
-
-          h5 Terrance Ford
-
-          p I'm a 27 year old IT Professional based in Raleigh, North Carolina.
-
-          a.about-anchor(href='/about') Learn More &rarr;
-
-          button.dark-mode Dark Mode
-
-    .wrapper
-      .header
-        .header-info-box
-          button#menu-icon.menu-icon(type='button' data-toggle='my-info')
-
-          a(href="/") Terrance Ford
-
+    meta(charset="utf-8")
+    meta(http-equiv="x-ua-compatible", content="ie=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Terrance Ford | Portfolio
+    link(rel="icon", href="/static/img/favicon.ico")
+    // Tailwind via CDN for zero-build modern UI
+    // Early theme to avoid flash
+    script.
+      (function () {
+        try {
+          var t = localStorage.getItem('theme');
+          var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+          if (t === 'dark' || (!t && prefersDark)) {
+            document.documentElement.classList.add('dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+          }
+        } catch (e) {}
+      })();
+    script(src="https://cdn.tailwindcss.com")
+    script.
+      tailwind.config = {
+        darkMode: 'class'
+      }
+    // Fonts
+    link(href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap", rel="stylesheet")
+    // Normalize (keep for cross-browser base)
+    link(rel="stylesheet", href="/static/css/normalize.css")
+    // Theme script (persist dark mode)
+    script(defer src="/static/js/script.js")
+    style.
+      :root { color-scheme: light dark; }
+      html { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; }
+  body(class="bg-white text-gray-900 transition-colors duration-300 dark:bg-gray-900 dark:text-gray-100")
+    header(class="max-w-6xl mx-auto flex items-center justify-between p-6")
+      a(href="/", class="text-xl font-bold tracking-tight") Terrance Ford
+      nav(class="flex items-center gap-6")
+        a(href="/", class="hover:text-blue-500") Home
+        a(href="/about", class="hover:text-blue-500") About
+        a(href="https://www.linkedin.com/in/terrance-ford-661aab226/", target="_blank", class="hover:text-blue-500") LinkedIn
+        button#theme-toggle(type="button", class="px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800") Toggle Mode
+    main(class="max-w-6xl mx-auto p-6")
       block content
-
-  script(src='/static/js/script.js')
+    footer(class="max-w-6xl mx-auto p-6 text-sm text-gray-500 dark:text-gray-400 border-t border-gray-200 dark:border-gray-800 mt-16")
+      | © #{new Date().getFullYear()} Terrance Ford 2025. All rights reserved.

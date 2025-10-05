@@ -1,7 +1,7 @@
 const express = require("express");
 const path = require("path");
 const bodyParser = require("body-parser");
-const {projects} = require("./data/data.json");
+const { projects } = require("./data/data.json");
 const app = express();
 const morgan = require("morgan");
 const favicon = require("serve-favicon");
@@ -59,10 +59,10 @@ app.use((err, req, res, next) => {
 });
 
 // Added node app.js to package.json so that server can be started with "npm start"
-// app.listen(3000, ()=>{
-//     console.log("Running on port 3000");
-// });
-
-app.listen(process.env.PORT, process.env.IP, function() {
-    console.log("Static node site is now online.")
+app.listen(3000, ()=>{
+    console.log("Running on port 3000");
 });
+
+// app.listen(process.env.PORT, process.env.IP, function() {
+//     console.log("Static node site is now online.")
+// });

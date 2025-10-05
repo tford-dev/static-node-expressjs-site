@@ -347,3 +347,23 @@ template {
 [hidden] {
   display: none;
 }
+
+/** Tailwind workarounds */ 
+.cert-img {
+  display: inline-block;
+  width: 220px;          /* fixed width */
+  height: 220px;         /* fixed height */
+  object-fit: cover;     /* keeps proportions without stretching */
+  margin: 8px;           /* space between images */
+  border-radius: 10px;   /* rounded corners */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  vertical-align: middle;
+  transition: transform 0.3s ease;
+}
+
+.cert-img:hover {
+  transform: scale(1.05);
+}
+
+/* For dark mode transitioning */
+html { transition: color 0.3s, background-color 0.3s; }

@@ -1,13 +1,10 @@
 extends layout
 
 block content
-  nav.nav
-    a(href='/')
-      span &larr;
-      |  Back
-
-  article.portfolio-intro
-    h1 Uh-oh, there was an error with the server. Refresh page or try again later.
-    h2 #{err.status}
-    p #{err.stack}
-
+  section(class="text-center py-24")
+    h1(class="text-4xl font-bold mb-4") Something went wrong
+    if error && error.message
+      p(class="text-gray-600 dark:text-gray-300 mb-2")= error.message
+    if error && error.status
+      p(class="text-sm text-gray-500") Status: #{error.status}
+    a(href="/", class="inline-block mt-6 px-5 py-3 rounded-xl border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800") Back to home

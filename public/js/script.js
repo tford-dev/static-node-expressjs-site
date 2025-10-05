@@ -1,28 +1,38 @@
+(function () {
+  const btn = document.getElementById('theme-toggle');
+  if (!btn) return;
 
-'use strict';
+  const root = document.documentElement;
 
-/**
- * Handle mobile menu functionality to hide/reveal sidebar on mobile layouts
- */
-const body = document.querySelector('body');
-let headerBtnClicked = false;
+  const isDark = () => root.classList.contains('dark');
 
-document.querySelector('#menu-icon').addEventListener('click', e => {
-  !headerBtnClicked ? body.style.transform = 'translateX(300px)' : body.style.transform = 'translateX(0px)';
-  return headerBtnClicked = !headerBtnClicked;
-});
-
-//Event listener so that dark mode can be added to app. This simply swaps between dark-styles.css and styles.css stylesheets in layout.pug
-document.querySelector(".about-anchor").nextElementSibling.addEventListener("click", (event)=>{
-  if(event.target.innerText === "DARK MODE"){
-    document.getElementById("styles").setAttribute("href", "/static/css/dark-styles.css");
-    event.target.innerText = "light mode"
-    event.target.classList.remove("dark-mode");
-    event.target.classList.add("light-mode");
-  } else {
-    document.getElementById("styles").setAttribute("href", "/static/css/styles.css");
-    event.target.innerText = "dark mode"
-    event.target.classList.remove("light-mode");
-    event.target.classList.add("dark-mode");
+  function updateLabel() {
+    const dark = isDark();
+    // Show the CURRENT mode as the label:
+    btn.textContent = dark ? 'Dark mode' : 'Light mode';
+    // (optional a11y)
+    btn.setAttribute('aria-pressed', dark ? 'true' : 'false');
+    btn.setAttribute('aria-label', dark ? 'Current theme: dark' : 'Current theme: light');
+    btn.title = dark ? 'Dark mode' : 'Light mode';
   }
-});
+
+  function setTheme(dark) {
+    root.classList.toggle('dark', dark);
+    localStorage.setItem('theme', dark ? 'dark' : 'light');
+    updateLabel();
+  }
+
+  // Initial label (the early inline script already set the class)
+  updateLabel();
+
+  // Toggle on click
+  btn.addEventListener('click', () => setTheme(!isDark()));
+
+  // If no stored preference, follow OS changes live
+  if (!localStorage.getItem('theme') && window.matchMedia) {
+    const mql = window.matchMedia('(prefers-color-scheme: dark)');
+    const onChange = (e) => setTheme(e.matches);
+    if (mql.addEventListener) mql.addEventListener('change', onChange);
+    else if (mql.addListener) mql.addListener(onChange);
+  }
+})();
