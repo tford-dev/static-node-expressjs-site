@@ -13,7 +13,7 @@
     // (optional a11y)
     btn.setAttribute('aria-pressed', dark ? 'true' : 'false');
     btn.setAttribute('aria-label', dark ? 'Current theme: dark' : 'Current theme: light');
-    btn.title = dark ? 'Dark mode' : 'Light mode';
+    btn.title = dark ? 'Light mode' : 'Dark mode';
   }
 
   function setTheme(dark) {
