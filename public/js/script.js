@@ -9,7 +9,7 @@
   function updateLabel() {
     const dark = isDark();
     // Show the CURRENT mode as the label:
-    btn.textContent = dark ? 'Dark mode' : 'Light mode';
+    btn.textContent = dark ? 'Light mode' : 'Dark mode';
     // (optional a11y)
     btn.setAttribute('aria-pressed', dark ? 'true' : 'false');
     btn.setAttribute('aria-label', dark ? 'Current theme: dark' : 'Current theme: light');
