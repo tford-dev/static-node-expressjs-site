@@ -7,7 +7,7 @@
             "technologies": ["HTML5", "CSS3", "JavaScript", "Express JS", "Node Js", "PostgreSQL", "Sequelize", "React JS", "Context API", "React-Router-v5"],
             "live_link": "https://workout-app-tford-dev.netlify.app/sign-in",
             "github_link": "https://github.com/tford-dev/workout-app-client",
-            "image_url": ["static/img/WO3.png", "static/img/WO2.png", "static/img/WO1.png", "static/img/WO4.png", "static/img/WO5.png", "static/img/WO6.png", "static/img/WO7.png", "static/img/WO8.png", "static/img/WO9.png", "static/img/WO10.png", "static/img/WO11.png", "static/img/WO12.png"]
+            "image_url": ["static/img/IMG_4914.PNG", "static/img/IMG_4915.PNG", "static/img/IMG_4916.PNG", "static/img/IMG_4917.PNG", "static/img/IMG_4918.PNG", "static/img/IMG_4919.PNG", "static/img/IMG_4920.PNG", "static/img/IMG_4921.PNG", "static/img/IMG_4922.PNG", "static/img/IMG_4923.PNG", "static/img/IMG_4924.PNG", "static/img/IMG_4926.PNG", "static/img/IMG_4927.PNG", "static/img/IMG_4928.PNG", "static/img/IMG_4929.PNG"]
         },
         {
             "id": 1,
