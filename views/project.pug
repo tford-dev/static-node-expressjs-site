@@ -15,14 +15,14 @@ block content
 
         if Array.isArray(project.image_url)
           each imgPath in project.image_url
-            img(src='/' + imgPath, alt=project.project_name, class="w-full rounded-2xl mb-6")
+            img(src='/' + imgPath, alt=project.project_name, class="w-full rounded-2xl mt-6 mb-6")
         else if project.image_url
-          img(src='/' + project.image_url, alt=project.project_name, class="w-full rounded-2xl mb-6")
+          img(src='/' + project.image_url, alt=project.project_name, class="w-full rounded-2xl mt-3 mb-6")
 
       .space-y-4
         h2(class="text-xl font-semibold") Details
         if project.technologies
-          p Strong stack:
+          p Technologies used:
           ul(class="list-disc list-inside")
             each tech in project.technologies
               li= tech
