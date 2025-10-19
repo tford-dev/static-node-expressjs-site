@@ -16,7 +16,7 @@
             "technologies": ["HTML5", "CSS3", "JavaScript", "Express JS", "Node Js", "PostgreSQL", "Sequelize", "React JS", "Context API"],
             "live_link": "https://tasks-by-tforddev.netlify.app/",
             "github_link": "https://github.com/tford-dev/tasks-app",
-            "image_url": ["static/img/task0.png", "static/img/task1.png", "static/img/task2.png", "static/img/task5.png", "static/img/task3.png", "static/img/task4.png"]
+            "image_url": ["static/img/task0.png", "static/img/task1.png", "static/img/task2.png", "static/img/task3.png", "static/img/task4.png", "static/img/task5.png", "static/img/task6.png", "static/img/task7.png"]
         },
         {
             "id": 2,
