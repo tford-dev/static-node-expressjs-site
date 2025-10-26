@@ -25,6 +25,10 @@ app.get("/about", (req, res)=>{
     res.render("about.pug");
 });
 
+app.get("/Recent", (req, res)=>{
+    res.render("recent.pug");
+});
+
 //route for project pages
 app.get("/projects/:id", (req, res, next) =>{
     const projectId = req.params.id;

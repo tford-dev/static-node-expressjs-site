@@ -1,0 +1,8 @@
+extends layout
+
+block content
+    article(class="grid lg:grid-cols-3 gap-8")
+      div(class="lg:col-span-2")
+        h1(class="text-3xl font-bold mb-2") Recent project 10-26-25 - In progress
+        p(class="text-gray-700 dark:text-gray-200 mb-4")="This project is a network lab running Cisco images on a GNS3 server in VMware Workstation Pro. AS 7500 is the HQ network, AS 7501 is Branch 1, AS 7502 is Branch 2, and AS 7503 is Branch 3. Each site is interconnected at the core routers using IPsec tunnels with EIGRP and eBGP over the public network. HQ hosts an Ubuntu RADIUS server that connects to its default gateway using GLBP. Branch 1 hosts the DNS server, and Branch 2 hosts the DHCP server. As of October 26, 2025, all devices can ping each other. The PCs obtain IP addresses from the DHCP server in Branch 2, traffic is protected using IPsec profiles over the public network, private IPs are blocked from traversing the ISP-CLOUD router, and GLBP has been configured with HQ-R3-GLBP as the AVG and DR in OSPF. Remaining tasks include tightening route redistribution on the core routers, applying SSH and ACLs for authorized PCs, declaring stub sites, configuring the Ubuntu RADIUS and DHCP servers, and analyzing traffic to ensure optimal routing with no loops. I will try to update the image below in the mean time until I can get configurations documented in Github."
+        img(src='../static/img/recent-project.png', alt='Network Topology Image', class="w-full rounded-2xl mt-6 mb-6")
