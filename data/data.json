@@ -1,4 +1,47 @@
 {
+    "octoberLab": [
+        {
+            "image_url": [
+                "static/img/october-lab0.png",
+                "static/img/october-lab1.png",
+                "static/img/october-lab2.png",
+                "static/img/october-lab3.png",
+                "static/img/october-lab4.png",
+                "static/img/october-lab5.png",
+                "static/img/october-lab6.png",
+                "static/img/october-lab7.png",
+                "static/img/october-lab8.png",
+                "static/img/october-lab9.png",
+                "static/img/october-lab10.png",
+                "static/img/october-lab11.png",
+                "static/img/october-lab12.png",
+                "static/img/october-lab13.png",
+                "static/img/october-lab14.png",
+                "static/img/october-lab15.png",
+                "static/img/october-lab16.png",
+                "static/img/october-lab17.png",
+                "static/img/october-lab18.png",
+                "static/img/october-lab19.png",
+                "static/img/october-lab20.png",
+                "static/img/october-lab21.png",
+                "static/img/october-lab22.png",
+                "static/img/october-lab23.png",
+                "static/img/october-lab24.png",
+                "static/img/october-lab25.png",
+                "static/img/october-lab26.png",
+                "static/img/october-lab27.png",
+                "static/img/october-lab28.png",
+                "static/img/october-lab29.png",
+                "static/img/october-lab30.png",
+                "static/img/october-lab31.png",
+                "static/img/october-lab32.png",
+                "static/img/october-lab33.png",
+                "static/img/october-lab34.png",
+                "static/img/october-lab35.png"
+            ]
+        }
+    ],
+
     "projects": [
         {
             "id": 0,

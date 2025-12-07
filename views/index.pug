@@ -13,9 +13,13 @@ block content
         a(href="/about", class="inline-block px-5 py-3 rounded-xl border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800") Learn more
 
   // Projects
-  section(class="mt-16")
+  section(class="mt-2")
     h2(class="text-2xl font-semibold mb-6 text-center") Featured Projects
     div(class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6")
+      a(href="/it-lab-october-lab-2025", class="block bg-gray-50 dark:bg-gray-800 rounded-2xl p-5 shadow hover:shadow-lg transition-shadow")
+        img(src='static/img/october-lab0.png' alt="october-lab-topology" class="w-full h-40 object-cover rounded-xl mb-4")
+        h3(class="text-lg font-semibold mb-1")="The October Lab(Linux, GLBP, IPSEC, DMVPN, NAT, eBGP, OSPF, EIGRP)"
+        p(class="text-sm text-gray-600 dark:text-gray-300 line-clamp-3")= "This is an Information Technology Lab using VMWare Workstation Pro, GNS3 server, and Cisco CML."
       each project in projects
         a(href=`/projects/${project.id}`, class="block bg-gray-50 dark:bg-gray-800 rounded-2xl p-5 shadow hover:shadow-lg transition-shadow")
           if Array.isArray(project.image_url) && project.image_url.length

@@ -1,0 +1,156 @@
+extends layout
+
+block content
+    article
+      div
+        h1(class="text-3xl font-bold mb-2") The October Lab(Linux, GLBP, IPSEC, DMVPN, NAT, eBGP, OSPF, EIGRP)
+        h2(class="text-2xl font-bold mb-2 pt-10") Big Picture
+        p In October of 2025, I began working on a lab that has an HQ site and three Branch sites. 
+        p This is an Information Technology Lab using VMWare Workstation Pro, GNS3 server, and Cisco CML.
+        img(src='../static/img/october-lab0.png', alt='october-lab-img', class="w-full rounded-2xl mt-6 mb-6")
+        img(src='../static/img/october-lab1.png', alt='october-lab-img', class="w-full rounded-2xl mt-6 mb-6")
+        ul(class="list-disc list-inside") - Technologies used in this lab:
+            li VLANs
+            li Trunking (802.1Q)
+            li GLBP
+            li eBGP
+            li OSPF
+            li Named EIGRP
+            li Static Routing
+            li DHCP (Cisco IOS-XE)
+            li DNS
+            li DMVPN
+            li NHRP
+            li IPsec
+            li GRE
+            li NAT
+            li ACLs
+            li Route Redistribution
+            li Route Maps
+            li SSH
+            li AAA
+            li RADIUS Authentication
+            li Linux (Debian)
+            li FreeRADIUS 3.0
+            li BIND9 DNS
+            li VPN Encryption
+        ol(class="list-decimal list-inside")   
+            li(class="pt-20") Each site has its own IGP, and each site is able to communicate with the others over an IPsec DMVPN tunnel.
+            img(src='../static/img/october-lab2.png', alt='october-lab-img', class="w-full rounded-2xl mt-6 mb-6")
+            img(src='../static/img/october-lab3.png', alt='october-lab-img', class="w-full rounded-2xl mt-6 mb-6")
+            i - The Cisco IOS image I'm using for the routers was causing DMVPN bugs.
+
+            img(src='../static/img/october-lab4.png', alt='october-lab-img', class="w-full rounded-2xl mt-6 mb-6")
+
+            li(class="pt-20") The HQ site is the hub and the Branch sites are the spokes.
+            img(src='../static/img/october-lab5.png', alt='october-lab-img', class="w-full rounded-2xl mt-6 mb-6")
+            i - The Cisco image I'm using for the routers causes the 'ip nhrp map multicast dynamic' command not to appear in the running config on the hub and the command 'ip nhrp shortcut' does not appear in the running config of the spokes. 
+            img(src='../static/img/october-lab6.png', alt='october-lab-img', class="w-full rounded-2xl mt-6 mb-6")
+            i - Notice how there are no public addresses in this traceroute due to NAT implementation at the core routers.
+
+            li(class="pt-20") Each site is connected to the ISP-CLOUD router through eBGP.
+            img(src='../static/img/october-lab7.png', alt='october-lab-img', class="w-full rounded-2xl mt-6 mb-6")
+            i - Active BGP connection between ISP-CLOUD and BRANCH-3-CORE routers. The ISP-CLOUD router does not route any packets with private addresses and I've applied ACLs to filter them out of the eBGP connections.
+
+            li(class="pt-20") ISP-CLOUD router provides real internet connectivity to each site from its WAN connection on interface g0/4.
+            img(src='../static/img/october-lab8.png', alt='october-lab-img', class="w-full rounded-2xl mt-6 mb-6")
+            i - PC5 successfully pinging FQDNs.
+
+            li(class="pt-20") Traffic from each site going to the public internet is translated with NAT at the core routers, and then translated again at interface g0/4 on the ISP-CLOUD router. 
+            img(src='../static/img/october-lab9.png', alt='october-lab-img', class="w-full rounded-2xl mt-6 mb-6")
+            i - 'show ip nat translations' output.
+
+            li(class="pt-20") Traffic from each site going to another site is redistributed into EIGRP (name: “CORPORATE TUNNEL”, AS 7500), encapsulated in GRE, and then protected with IPsec.
+            img(src='../static/img/october-lab10.png', alt='october-lab-img', class="w-full rounded-2xl mt-6 mb-6")
+
+            li(class="pt-20") Traffic received from another site is redistributed into the EIGRP DMVPN TUNNEL and then sent to the host.
+            img(src='../static/img/october-lab11.png', alt='october-lab-img', class="w-full rounded-2xl mt-6 mb-6")
+            i - Redistribution at each core router is performed with ACLs and route-maps of the site's internal network to avoid loops.
+
+            li(class="pt-20") The access layer at each site is layer 2.
+            img(src='../static/img/october-lab12.png', alt='october-lab-img', class="w-full rounded-2xl mt-6 mb-6")
+
+            li(class="pt-20") Each switch at the access layer of each site advertises it's VLAN networks into their site's IGP.
+            img(src='../static/img/october-lab13.png', alt='october-lab-img', class="w-full rounded-2xl mt-6 mb-6")
+
+            li(class="pt-20") There are only 2 VLANs at each site, the PC VLAN and the SERVER VLAN. 
+            img(src='../static/img/october-lab14.png', alt='october-lab-img', class="w-full rounded-2xl mt-6 mb-6")
+
+            li(class="pt-20") Each PC in the PC VLAN can get DHCP IPv4 addressing from BRANCH-2-DHCP in AS 7502.
+            img(src='../static/img/october-lab15.png', alt='october-lab-img', class="w-full rounded-2xl mt-6 mb-6")
+
+            li(class="pt-20") Each device in the network can resolve hostnames of Linux or network devices at any site by using BRANCH-1-DNS in AS 7501.
+            img(src='../static/img/october-lab16.png', alt='october-lab-img', class="w-full rounded-2xl mt-6 mb-6")
+            img(src='../static/img/october-lab17.png', alt='october-lab-img', class="w-full rounded-2xl mt-6 mb-6")
+            i - 10.0.1.34 is the DNS server. BRANCH-1-DNS also uses public DNS servers 1.1.1.1 and 8.8.8.8.
+
+            li(class="pt-20") You must sign into each network device at a site using credentials stored on the RADIUS server, HQ-RADIUS, in AS 7500.
+            img(src='../static/img/october-lab18.png', alt='october-lab-img', class="w-full rounded-2xl mt-6 mb-6")
+            
+            li(class="pt-20") You can only SSH into a network device at a site using credentials stored in HQ-RADIUS in AS 7500. 
+            img(src='../static/img/october-lab19.png', alt='october-lab-img', class="w-full rounded-2xl mt-6 mb-6")
+
+
+
+            h3(class="text-2xl font-bold mb-2 pt-16") HQ - AS 7500
+
+            li(class="pt-10") Core router HQ-R1-CORE is the hub in the DMVPN tunnel(172.16.0.1/28) between each site.
+            img(src='../static/img/october-lab20.png', alt='october-lab-img', class="w-full rounded-2xl mt-6 mb-6")
+
+            li(class="pt-20") AS 7500 uses OSPF as the IGP. 
+            img(src='../static/img/october-lab21.png', alt='october-lab-img', class="w-full rounded-2xl mt-6 mb-6")
+
+            li(class="pt-20") The hosts in AS 7500 use 10.0.0.1 as their default gateway, which is the virtual IP in GLBP 10.
+            img(src='../static/img/october-lab22.png', alt='october-lab-img', class="w-full rounded-2xl mt-6 mb-6")
+
+            li(class="pt-20") HQ-R3-GLBP is the Active Virtual Gateway and HQ-R2-GLBP is an Active Virtual Forwarder with the next highest priority. 
+            img(src='../static/img/october-lab23.png', alt='october-lab-img', class="w-full rounded-2xl mt-6 mb-6")
+
+            li(class="pt-20") The connection between the GLBP routers and HQ-SW are trunk connections.
+            img(src='../static/img/october-lab24.png', alt='october-lab-img', class="w-full rounded-2xl mt-6 mb-6")
+
+            h4(class="text-1xl font-bold mb-2 pt-16") HQ-RADIUS(Debian Linux)
+
+            li(class="pt-10") This radius server is powered by the FreeRADIUS 3.0 package.
+            img(src='../static/img/october-lab25.png', alt='october-lab-img', class="w-full rounded-2xl mt-6 mb-6")
+
+            li(class="pt-20") Each client is able to authenticate using the key october-lab over ports 1812 and 1813.
+            img(src='../static/img/october-lab26.png', alt='october-lab-img', class="w-full rounded-2xl mt-6 mb-6")
+            img(src='../static/img/october-lab27.png', alt='october-lab-img', class="w-full rounded-2xl mt-6 mb-6")
+
+
+
+            h5(class="text-2xl font-bold mb-2 pt-16") Branch 1 - AS 7501
+
+            li(class="pt-10") Core router BRANCH-1-CORE is a spoke(172.16.0.2/28) in the DMVPN tunnel.
+            img(src='../static/img/october-lab28.png', alt='october-lab-img', class="w-full rounded-2xl mt-6 mb-6")
+
+            li(class="pt-20") AS 7501 uses named EIGRP as the IGP.
+            img(src='../static/img/october-lab29.png', alt='october-lab-img', class="w-full rounded-2xl mt-6 mb-6")
+
+            h6(class="text-1xl font-bold mb-2 pt-16") BRANCH-1-DNS(Debian Linux)
+
+            li(class="pt-10") This DNS server is powered by the BIND9 package.
+            img(src='../static/img/october-lab30.png', alt='october-lab-img', class="w-full rounded-2xl mt-6 mb-6")
+
+
+            h7(class="text-2xl font-bold mb-2 pt-16") Branch 2 - AS 7502
+
+            li(class="pt-10") Core router BRANCH-2-CORE is a spoke(172.16.0.3/28) in the DMVPN tunnel.
+            img(src='../static/img/october-lab31.png', alt='october-lab-img', class="w-full rounded-2xl mt-6 mb-6")
+
+            li(class="pt-20") AS 7502 uses OSPF as the IGP.
+            img(src='../static/img/october-lab32.png', alt='october-lab-img', class="w-full rounded-2xl mt-6 mb-6")
+
+            h8(class="text-1xl font-bold mb-2 pt-16") BRANCH-2-DHCP(Cisco IOS-XE)
+
+            li(class="pt-10") This DHCP server is technically a Cisco router, so I have enabled RADIUS authentication on it.
+            img(src='../static/img/october-lab33.png', alt='october-lab-img', class="w-full rounded-2xl mt-6 mb-6")
+
+            h9(class="text-2xl font-bold mb-2 pt-16") Branch 3 - AS 7503
+
+            li(class="pt-10") Core router BRANCH-3-CORE is a spoke(172.16.0.4/28) in the DMVPN tunnel.
+            img(src='../static/img/october-lab34.png', alt='october-lab-img', class="w-full rounded-2xl mt-6 mb-6")
+
+            li(class="pt-20") AS 7502 uses static routing inside its network.
+            img(src='../static/img/october-lab35.png', alt='october-lab-img', class="w-full rounded-2xl mt-6 mb-6")

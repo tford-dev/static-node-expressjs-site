@@ -3,16 +3,17 @@ extends layout
 block content
     article(class="grid lg:grid-cols-3 gap-8")
       div(class="lg:col-span-2")
-        h1(class="text-3xl font-bold mb-2") Recent project 11-9-25 - In progress
-        p This project is a network lab running Cisco images on a GNS3 server in VMware Workstation Pro. 
-        p AS 7500 is the HQ network, AS 7501 is Branch 1, AS 7502 is Branch 2, AS 7503 is Branch 3, and AS 8000 is the ISP network.
-        p Each site communicates with each other using a DMVPN IPSEC tunnel that is running on top of EIGRP.
-        p Each site has real internet connectivity using the ISP-CLOUD router.
-        p In order to sign into each network device at a site you must authenticate using credentials that are stored on the RADIUS server.
-        p You must authenticate with credentials stored on the RADIUS server when you SSH to a device as well.
-        p Each device can resolve names using the DNS server stored in AS 7501.
-        p Each device can get IPv4 addressing from the DHCP server in AS 7502.
-        p This is a rushed summary, I will continue to update this as I document more.
+        h1(class="text-3xl font-bold mb-2") Recent project: The October Lab
+        p I've recently gotten to a stopping point with my IT lab I've began in late September 2025.
+        p The lab features a myriad of technologies related to infrastucture and security.
+        p For example, I would like to tighten the allowed hosts for SSH and to swap out the core routers with more powerful ones so I can get DMVPN phase 3 to function better.
+        p In the future I plan to implement more security and to document it on here.
+
+        p(class="pt-10") You can view the details on the project in the link below: 
+        a(href="/it-lab-october-lab-2025" class="inline-block px-5 py-3 rounded-xl border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800 mr-3 mt-2") The October Lab
+
+        p(class="pt-10") You can view the LinkedIn version of the details on the project in the link below: 
+        a(href="https://www.linkedin.com/pulse/october-lablinux-glbp-ipsec-dmvpn-nat-ebgp-ospf-eigrp-terrance-ford-t5ere/" target="_blank" class="inline-block px-5 py-3 rounded-xl border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800 mt-2 mr-3") LinkedIn Version: The October Lab
 
         img(src='../static/img/topology-11-22-25-full.png', alt='Network Topology Image', class="w-full rounded-2xl mt-6 mb-6")
         img(src='../static/img/proving-dhcp-from-pc1.png', alt='Network Topology Image', class="w-full rounded-2xl mt-6 mb-6")

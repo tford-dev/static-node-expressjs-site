@@ -2,6 +2,7 @@ const express = require("express");
 const path = require("path");
 const bodyParser = require("body-parser");
 const { projects } = require("./data/data.json");
+const { octoberLab } = require("./data/data.json")
 const app = express();
 const morgan = require("morgan");
 const favicon = require("serve-favicon");
@@ -27,6 +28,10 @@ app.get("/about", (req, res)=>{
 
 app.get("/Recent", (req, res)=>{
     res.render("recent.pug");
+});
+
+app.get("/it-lab-october-lab-2025", (req, res)=>{
+    res.render("october-lab.pug");
 });
 
 //route for project pages
