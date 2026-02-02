@@ -3,21 +3,32 @@ extends layout
 block content
     article(class="grid lg:grid-cols-3 gap-8")
       div(class="lg:col-span-2")
-        h1(class="text-3xl font-bold mb-2") Recent project: The October Lab
-        p I've recently gotten to a stopping point with my IT lab I've began in late September 2025.
-        p The lab features a myriad of technologies related to infrastucture and security.
-        p For example, I would like to tighten the allowed hosts for SSH and to swap out the core routers with more powerful ones so I can get DMVPN phase 3 to function better.
-        p In the future I plan to implement more security and to document it on here.
+        h1(class="text-3xl font-bold mb-2") Recent project in progress: Hybrid Cloud Lab
+        p 2/1/26
+        p Recently I wanted to begin developing my AWS skills and wanted to build something as an engaging way to learn.
+        p Right now I'm thinking of connecting AWS services to a GNS3 network lab.
+        p I decided to begin building the GNS3 lab and then integrate AWS later.
 
-        p(class="pt-10") You can view the details on the project in the link below: 
-        a(href="/it-lab-october-lab-2025" class="inline-block px-5 py-3 rounded-xl border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800 mr-3 mt-2") The October Lab
+        p The network has an HQ site connected to 2 branch sites.
+        p All sites are connected to each other via the ISP router 
 
-        p(class="pt-10") You can view the LinkedIn version of the details on the project in the link below: 
-        a(href="https://www.linkedin.com/pulse/october-lablinux-glbp-ipsec-dmvpn-nat-ebgp-ospf-eigrp-terrance-ford-t5ere/" target="_blank" class="inline-block px-5 py-3 rounded-xl border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800 mt-2 mr-3") LinkedIn Version: The October Lab
+        p Each site has a Cisco ASA firewall at the core, a Cisco IOSxe router, and a layer 3 switch.
 
-        img(src='../static/img/topology-11-22-25-full.png', alt='Network Topology Image', class="w-full rounded-2xl mt-6 mb-6")
-        img(src='../static/img/proving-dhcp-from-pc1.png', alt='Network Topology Image', class="w-full rounded-2xl mt-6 mb-6")
-        img(src='../static/img/local-radius-authentication-branch-3-sw.png', alt='Network Topology Image', class="w-full rounded-2xl mt-6 mb-6")
-        img(src='../static/img/proving-dns-server-functionality.png', alt='Network Topology Image', class="w-full rounded-2xl mt-6 mb-6")
-        img(src='../static/img/sheet-11-9-25.png', alt='Network Topology Image', class="w-full rounded-2xl mt-6 mb-6")
+        p The ISP router connects each site's firewall with eBGP - both IPv4 and IPv6,
+
+        p The firewall connects to the internal router with iBGP,
+        p and the routers connect to the internal switches with OSPF.
+        p Traffic is redistributed at each internal router.
+
+        p Traffic is translated at the firewalls, and traffic is translated again at g0/3 on the ISP router.
+        p Interface g0/3 on the ISP router gives the whole network real internet.
+        p RFC 1918 traffic is filtered in eBGP.
+
+        p The sites communicate with each other through a site-to-site IPSEC tunnel - aes256 encryption and sha256 hashing.
+        p Site to Site traffic is encrypted in eBGP.
         
+        p Each site has one linux server - RADIUS, DNS, and DHCP.
+        p There is a Windows 11 VM in this lab that can communicate with the internet.
+        p I still need to set up the servers in this lab and I need to set up more security in the lab.
+
+        img(src='../static/img/feb-lab-first-draft.png', alt='Network Topology Image', class="w-full rounded-2xl mt-6 mb-6")

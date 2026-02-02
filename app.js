@@ -71,7 +71,3 @@ app.use((err, req, res, next) => {
 // app.listen(3000, ()=>{
 //     console.log("Running on port 3000");
 // });
-
-app.listen(process.env.PORT, process.env.IP, function() {
-    console.log("Static node site is now online.")
-});
