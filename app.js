@@ -67,6 +67,10 @@ app.use((err, req, res, next) => {
   }
 });
 
+app.listen(process.env.PORT, process.env.IP, function() {
+    console.log("Static node site is now online.")
+});
+
 // Added node app.js to package.json so that server can be started with "npm start"
 // app.listen(3000, ()=>{
 //     console.log("Running on port 3000");
