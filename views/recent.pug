@@ -5,30 +5,35 @@ block content
       div(class="lg:col-span-2")
         h1(class="text-3xl font-bold mb-2") Recent project in progress: Hybrid Cloud Lab
         p 2/1/26
-        p Recently I wanted to begin developing my AWS skills and wanted to build something as an engaging way to learn.
-        p Right now I'm thinking of connecting AWS services to a GNS3 network lab.
-        p I decided to begin building the GNS3 lab and then integrate AWS later.
-
-        p The network has an HQ site connected to 2 branch sites.
-        p All sites are connected to each other via the ISP router 
-
-        p Each site has a Cisco ASA firewall at the core, a Cisco IOSxe router, and a layer 3 switch.
-
+        p Recently I wanted to expiriment more with Linux and wanted to build something as an engaging way to learn.
+        br
+        p So far I have 4 debian Linux devices in the lab.
+        ul(class="list-disc list-inside") 
+          li 1 to be used as a RADIUS server so network devices must authenticate with it to sign in 
+          li 1 to be used as a DNS server to resolve names of network devices 
+          li 1 to be used as a DHCP server for address assignment for vPCs 
+          li 1 Kali Linux device to test and verify services in the network.
+        br 
+        p I decided to begin building the GNS3 lab and then integrate services once the network is stable.
+        ul(class="list-disc list-inside")
+          li The network has an HQ site connected to 2 branch sites.
+          li All sites are connected to each other via the ISP router 
+          li Each site has a Cisco ASA firewall at the core, a Cisco IOSxe router, and a layer 3 switch.
+        br
         p The ISP router connects each site's firewall with eBGP - both IPv4 and IPv6,
-
-        p The firewall connects to the internal router with iBGP,
-        p and the routers connect to the internal switches with OSPF.
-        p Traffic is redistributed at each internal router.
-
+        ul(class="list-disc list-inside")
+          li The firewall connects to the internal router with iBGP,
+          li and the routers connect to the internal switches with OSPF.
+          li Traffic is redistributed at each internal router.
+        br
         p Traffic is translated at the firewalls, and traffic is translated again at g0/3 on the ISP router.
-        p Interface g0/3 on the ISP router gives the whole network real internet.
-        p RFC 1918 traffic is filtered in eBGP.
-
+        ul(class="list-disc list-inside")
+          li Interface g0/3 on the ISP router gives the whole network real internet.
+          li RFC 1918 traffic is filtered in eBGP.
+        br
         p The sites communicate with each other through a site-to-site IPSEC tunnel - aes256 encryption and sha256 hashing.
-        p Site to Site traffic is encrypted in eBGP.
-        
-        p Each site has one linux server - RADIUS, DNS, and DHCP.
-        p There is a Windows 11 VM in this lab that can communicate with the internet.
-        p I still need to set up the servers in this lab and I need to set up more security in the lab.
+        ul(class="list-disc list-inside")
+          li Site to Site traffic is encrypted in eBGP.
+          li I still need to set up the servers in this lab and I need to set up more security in the lab.
 
-        img(src='../static/img/feb-lab-first-draft.png', alt='Network Topology Image', class="w-full rounded-2xl mt-6 mb-6")
+    img(src='../static/img/feb-lab-topology-kali-linux-2-8-26.png', alt='Network Topology Image', class="w-full rounded-2xl mt-6 mb-6")
