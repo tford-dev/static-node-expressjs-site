@@ -7,7 +7,6 @@ export default function RecentPage() {
         <div>
           <p className="small-label">Recent Work</p>
           <h2>Hands-on labs in progress</h2>
-          <p className="section-description">Dates kept exactly as you wrote them.</p>
         </div>
         <Link href="/" className="button secondary">
           ← Back home
