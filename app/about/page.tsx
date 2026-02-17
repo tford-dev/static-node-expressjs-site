@@ -61,7 +61,7 @@ export default function AboutPage() {
               <a href="https://github.com/tford-dev" target="_blank" rel="noreferrer">
                 — Github
               </a>
-              <a href="https://www.linkedin.com/in/tford-dev/" target="_blank" rel="noreferrer">
+              <a href="https://www.linkedin.com/in/terrance-ford-661aab226/" target="_blank" rel="noreferrer">
                 — LinkedIn
               </a>
               <a href="mailto:terranceford777@gmail.com">— Email: terranceford777@gmail.com</a>
