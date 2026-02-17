@@ -35,9 +35,9 @@ export default function RecentPage() {
                 <p>The other settings such as weight and denoise can be adjusted for how different you would like the output image to be.</p>
               </div>
             </div>
-          </div>
-          <img src="/static/img/ai-image-generation-workflow.png" alt="AI image generation workflow" />
+          </div>    
         </div>
+        <img src="/static/img/ai-image-generation-workflow.png" alt="AI image generation workflow" />
       </article>
 
       <article className="card">
@@ -88,8 +88,8 @@ export default function RecentPage() {
               </div>
             </div>
           </div>
-          <img src="/static/img/feb-lab-topology-kali-linux-2-8-26.png" alt="Hybrid cloud lab topology" />
         </div>
+      <img src="/static/img/feb-lab-topology-kali-linux-2-8-26.png" alt="Hybrid cloud lab topology" />
       </article>
     </div>
   );

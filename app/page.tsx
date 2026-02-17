@@ -29,12 +29,6 @@ export default function HomePage() {
                 Github
               </a>
             </div>
-            <div className="chip-row">
-              <span className="tag">CCNP Enterprise</span>
-              <span className="tag">System Administration</span>
-              <span className="tag">Automation</span>
-              <span className="tag">Full-Stack React</span>
-            </div>
           </div>
 
           <div className="hero-photo">
@@ -43,12 +37,12 @@ export default function HomePage() {
             </div>
             <div className="card mini-card">
               <p className="small-label">Currently</p>
-              <p style={{ margin: 0 }}>Building resilient networks & shipping clean React UIs.</p>
+              <p style={{ margin: 0 }}>Building network labs and researching AI workflows</p>
             </div>
           </div>
         </div>
 
-        <div className="hero-grid">
+        {/* <div className="hero-grid">
           <div className="stat-card">
             <span className="small-label">Experience</span>
             <strong>4+ years</strong>
@@ -65,7 +59,7 @@ export default function HomePage() {
               React, Node.js, PostgreSQL, Tailwind, Cisco Networking, Identity & Access Management, Automation.
             </p>
           </div>
-        </div>
+        </div> */}
       </section>
 
       <div className="section-header">
