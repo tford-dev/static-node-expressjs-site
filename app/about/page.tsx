@@ -83,7 +83,6 @@ export default function AboutPage() {
       <div className="section-header">
         <div>
           <p className="small-label">Certifications</p>
-          <h2>Proof of expertise</h2>
         </div>
       </div>
       <div className="gallery-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))' }}>
