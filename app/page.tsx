@@ -84,7 +84,6 @@ export default function HomePage() {
         <div>
           <p className="small-label">Featured Projects</p>
           <h2>Applications & UI builds</h2>
-          <p className="section-description">Recruiter-friendly cards keep your project layout and links intact.</p>
         </div>
         <Link href="/about" className="button secondary">
           Meet Terrance
