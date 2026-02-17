@@ -64,7 +64,6 @@ export default function HomePage() {
 
       <div className="section-header">
         <div>
-          <p className="small-label">Highlighted Lab</p>
           <h2>The October Lab (Linux, GLBP, IPSEC, DMVPN, NAT, eBGP, OSPF, EIGRP)</h2>
           <p className="section-description">Hands-on networking lab built with VMWare Workstation Pro, GNS3 server, and Cisco CML.</p>
         </div>
