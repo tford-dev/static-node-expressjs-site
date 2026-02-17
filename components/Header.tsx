@@ -24,7 +24,7 @@ export default function Header() {
                 {link.label}
               </a>
             ) : (
-              <Link key={link.href} href={link.href} className="nav-link">
+              <Link key={link.href} href={link.href as any} className="nav-link">
                 {link.label}
               </Link>
             )
