@@ -47,7 +47,7 @@ export default function AboutPage() {
                 learning to stay ahead in the ever-evolving tech landscape.
               </p>
               <div className="hero-actions">
-                <a className="button" href="mailto:terranceford777@gmail.com">
+                <a className="button" href="mailto:terrance@terrance-ford.com">
                   Email me
                 </a>
                 <a className="button secondary" href="tel:+17578145785">
@@ -64,7 +64,7 @@ export default function AboutPage() {
               <a href="https://www.linkedin.com/in/terrance-ford-661aab226/" target="_blank" rel="noreferrer">
                 — LinkedIn
               </a>
-              <a href="mailto:terranceford777@gmail.com">— Email: terranceford777@gmail.com</a>
+              <a href="mailto:terrance@terrance-ford.com">— Email: terrance@terrance-ford.com</a>
               <p>— Phone: (757)-814-5785</p>
             </div>
           </div>
