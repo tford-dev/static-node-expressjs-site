@@ -31,14 +31,12 @@ export default function AboutPage() {
         <div className="card">
           <div className="bento">
             <div className="stack" style={{ alignItems: 'flex-start' }}>
-              <p className="small-label">Portrait</p>
               <div className="avatar-ring">
                 <img src="/static/img/side-image-arm-up-brighter.png" alt="Terrance Ford" loading="lazy" />
               </div>
             </div>
 
             <div className="stack">
-              <p className="small-label">Bio</p>
               <p>
                 My name is Terrance Ford and I&apos;m an IT professional based in Raleigh, North Carolina. I have 4 years of
                 experience working in Information Technology and I hold a CCNP Enterprise certification. With a background
