@@ -45,6 +45,24 @@
     "projects": [
         {
             "id": 0,
+            "project_name": "Landscaping Company Concept",
+            "description": "TF Landscaping is a modern, responsive demo website that showcases a complete small-business marketing build: a bold hero with clear calls-to-action, service listings, project gallery, testimonials, and an About page. It highlights production-ready Next.js (App Router) + TypeScript + Tailwind styling, smooth UI interactions, SEO-friendly metadata, and a validated contact form with a backend API route for handling submissions. Placeholder content and imagery are used to demonstrate design and development skills in a realistic landscaping business scenario.",
+            "technologies": ["React", "javascript", "node", "typescript", "postcss", "eslint", "nextjs", "tailwindcss", "zod"],
+            "live_link": "https://workout-app-tford-dev.netlify.app/sign-in",
+            "github_link": "https://github.com/tford-dev/workout-app-client",
+            "image_url": ["static/img/landscaping0.png", "static/img/landscaping1.png", "static/img/landscaping2.png", "static/img/landscaping3.png"]
+        },
+        {
+            "id": 1,
+            "project_name": "Solo Realtor Concept",
+            "description": "This project showcases a premium, conversion-focused personal website concept for a solo real estate agent. It demonstrates a modern Next.js (App Router) build with TypeScript and Tailwind CSS, including responsive UI, reusable components, and polished page layouts. The site includes mock listings, lead-capture forms with validation and an API route, plus SEO essentials like metadata, Open Graph tags, schema markup, sitemap, and robots.txt. All content and properties are placeholders for portfolio demonstration purposes.",
+            "technologies": ["React", "javascript", "node", "typescript", "postcss", "eslint", "nextjs", "tailwindcss", "zod"],
+            "live_link": "https://workout-app-tford-dev.netlify.app/sign-in",
+            "github_link": "https://github.com/tford-dev/workout-app-client",
+            "image_url": ["static/img/solo-realtor1.png", "static/img/solo-realtor0.png", "static/img/solo-realtor2.png", "static/img/solo-realtor3.png"]
+        },
+        {
+            "id": 2,
             "project_name": "Full Stack React Workout-app",
             "description": "This web app is primarily made for mobile devices. A user can make an account with an email and 8-20 character password. The user can then sign in, create workouts, track sets, and enter in repetitions. Users can delete and update workouts/exercises as well. User passwords are encrypted with bcrypt. The API for this app is hosted on Heroku, the Postgres database is hosted on Neon, and the front of this app is hosted on Netlify.",
             "technologies": ["HTML5", "Tailwind CSS", "JavaScript", "Express JS", "Node Js", "PostgreSQL", "Sequelize", "React JS", "Context API", "React-Router-v5"],
@@ -53,31 +71,13 @@
             "image_url": ["static/img/IMG_4914.PNG", "static/img/IMG_4915.PNG", "static/img/IMG_4916.PNG", "static/img/IMG_4917.PNG", "static/img/IMG_4918.PNG", "static/img/IMG_4919.PNG", "static/img/IMG_4920.PNG", "static/img/IMG_4921.PNG", "static/img/IMG_4922.PNG", "static/img/IMG_4923.PNG", "static/img/IMG_4924.PNG", "static/img/IMG_4926.PNG", "static/img/IMG_4927.PNG", "static/img/IMG_4928.PNG", "static/img/IMG_4929.PNG"]
         },
         {
-            "id": 1,
+            "id": 3,
             "project_name": "Full Stack React Tasks/Notes App",
             "description": "This app was the first app I created after getting my tech degree from Treehouse. It is a CRUD app that users can track tasks in. A user can make an account with an email and 8-20 character password. The user can then sign in, create a task and then add in details such as a description, time, and date. Users can also edit and delete their tasks/to-dos. The API for this app is hosted on Heroku, the Postgres database is hosted on Neon, and the front of this app is hosted on Netlify.",
             "technologies": ["HTML5", "Tailwind CSS", "JavaScript", "Express JS", "Node Js", "PostgreSQL", "Sequelize", "React JS", "Context API"],
             "live_link": "https://tasks-by-tforddev.netlify.app/",
             "github_link": "https://github.com/tford-dev/tasks-app",
             "image_url": ["static/img/task0.png", "static/img/task1.png", "static/img/task2.png", "static/img/task3.png", "static/img/task4.png", "static/img/task5.png", "static/img/task6.png", "static/img/task7.png"]
-        },
-        {
-            "id": 2,
-            "project_name": "Random Quote Generator",
-            "description": "This project is a random quote generator that cycles through an array of quotes and displays them onto the DOM automatically.",
-            "technologies": ["HTML5", "CSS3", "JavaScript"],
-            "live_link": "https://tford-dev.github.io/randomQuoteGenerator/",
-            "github_link": "https://github.com/tford-dev/randomQuoteGenerator",
-            "image_url": ["static/img/rqg1.png", "static/img/rqg2.png"]
-        },
-        {
-            "id": 3,
-            "project_name": "Data Pagination",
-            "description": "This project displays data pagination. A maximum of 9 students are displayed at a time from an array of objects.",
-            "technologies": ["HTML5", "CSS3", "JavaScript"],
-            "live_link": "https://tford-dev.github.io/dataPagination/",
-            "github_link": "https://github.com/tford-dev/dataPagination",
-            "image_url": ["static/img/datapag1.png", "static/img/datapag2.png"]
         },
         {
             "id": 4,
@@ -99,30 +99,12 @@
         },
         {
             "id": 6,
-            "project_name": "Public API Requests",
-            "description": "This project uses the randomuser api. It displays 12 people and allows the user to toggle between each person as well as search each person by name, location, or birthday. This project also features a modal.",
-            "technologies": ["HTML5", "CSS3", "JavaScript", "Node.js", "RandomAPI (https://randomuser.me/)"],
-            "live_link": "https://tford-dev.github.io/publicApiRequest/",
-            "github_link": "https://github.com/tford-dev/publicApiRequest",
-            "image_url": ["static/img/apiList1.png", "static/img/apiList2.png"]
-        },
-        {
-            "id": 7,
             "project_name": "Color Guessing Game",
             "description": "This rgb color guessing game was inspired by a project from a course I took, however all of the code was written by me. To play the game, you must click the correct square color based off the CSS rgb color numbers at the top of the screen. The score is determined by the difference between the number of squares clicked and the total squares on the screen, depending on the selected game mode.",
             "technologies": ["HTML5", "CSS3", "JavaScript", "Node.js"],
             "live_link": "https://tforddev-color-guessing-game-9832739a2a11.herokuapp.com/",
             "github_link": "https://github.com/tford-dev/color-guessing-game",
             "image_url": ["static/img/color-guess-screenshot.png", "static/img/color-guess-screenshot1.png"]
-        },
-        {
-            "id" : 8,
-            "project_name": "React Gallery",
-            "description": "This is a react app for the 7th project in the TeamTreeHouse-Full-Stack-Javascript-Techdegree. The data used in this app comes from the Flickr API. The composition of this app is mostly class components but I did use React Hooks where I absolutely needed it. When navigating through this application, it does take 1-2 seconds before getting a response.",
-            "technologies": ["React Js", "JavaScript", "CSS3", "JSX", "React-Router", "Flickr API"],
-            "live_link": "https://reactgallerytford.netlify.app/",
-            "github_link": "https://github.com/tford-dev/react-gallery",
-            "image_url": ["static/img/reactgallery0.png", "static/img/reactgallery1.png", "static/img/reactgallery2.png"]
         }
     ]
 }

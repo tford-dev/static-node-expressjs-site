@@ -1,8 +1,8 @@
-// File: /Users/terranceford/Documents/static-node-expressjs-site/app/it-lab-october-lab-2025/page.tsx
-import * as entry from '../../../../app/it-lab-october-lab-2025/page.js'
+// File: /Users/terranceford/Documents/static-node-expressjs-site/app/about/page.tsx
+import * as entry from '../../../../app/about/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
-type TEntry = typeof import('../../../../app/it-lab-october-lab-2025/page.js')
+type TEntry = typeof import('../../../../app/about/page.js')
 
 // Check that the entry is a valid entry
 checkFields<Diff<{
