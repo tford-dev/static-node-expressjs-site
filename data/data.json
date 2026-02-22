@@ -46,6 +46,15 @@
         {
             "id": 0,
             "project_name": "Landscaping Company Concept",
+            "description": "I designed and built a premium roofing company website (TF Roofing & Exteriors) to look and behave like a real high-end contractor brand and convert visitors into leads.\nIt’s a production-ready Next.js (App Router) site using TypeScript and Tailwind CSS, with reusable components and templates for services and city/location SEO pages. The site is built around conversion: a sticky header with “Call” and “Free Estimate,” a mobile CTA bar, and an estimate form that appears in the homepage hero, on the contact page, and in a modal with a clean success message.\n \nIt also includes a dedicated “RoofCare 300” ($300/month) maintenance plan landing page with clear benefits, a comparison table, and a simple signup flow. SEO basics are covered (unique metadata, OpenGraph, sitemap/robots, and LocalBusiness JSON-LD), and the UI is responsive, fast, and accessible with modern typography, strong contrast, and subtle interactions.",
+            "technologies": ["React", "javascript", "node", "typescript", "postcss", "eslint", "nextjs", "tailwindcss", "zod"],
+            "live_link": "https://roofing-contractor-page.netlify.app/",
+            "github_link": "https://github.com/tford-dev/roofing-contractor-page",
+            "image_url": ["static/img/tfrooferco0.png", "static/img/tfrooferco1.png", "static/img/tfrooferco2.png", "static/img/tfrooferco3.png", "static/img/tfrooferco4.png"]
+        },
+        {
+            "id": 1,
+            "project_name": "Landscaping Company Concept",
             "description": "TF Landscaping is a modern, responsive demo website that showcases a complete small-business marketing build: a bold hero with clear calls-to-action, service listings, project gallery, testimonials, and an About page. It highlights production-ready Next.js (App Router) + TypeScript + Tailwind styling, smooth UI interactions, SEO-friendly metadata, and a validated contact form with a backend API route for handling submissions. Placeholder content and imagery are used to demonstrate design and development skills in a realistic landscaping business scenario.",
             "technologies": ["React", "javascript", "node", "typescript", "postcss", "eslint", "nextjs", "tailwindcss", "zod"],
             "live_link": "https://workout-app-tford-dev.netlify.app/sign-in",
@@ -53,7 +62,7 @@
             "image_url": ["static/img/landscaping0.png", "static/img/landscaping1.png", "static/img/landscaping2.png", "static/img/landscaping3.png"]
         },
         {
-            "id": 1,
+            "id": 2,
             "project_name": "Solo Realtor Concept",
             "description": "This project showcases a premium, conversion-focused personal website concept for a solo real estate agent. It demonstrates a modern Next.js (App Router) build with TypeScript and Tailwind CSS, including responsive UI, reusable components, and polished page layouts. The site includes mock listings, lead-capture forms with validation and an API route, plus SEO essentials like metadata, Open Graph tags, schema markup, sitemap, and robots.txt. All content and properties are placeholders for portfolio demonstration purposes.",
             "technologies": ["React", "javascript", "node", "typescript", "postcss", "eslint", "nextjs", "tailwindcss", "zod"],
@@ -62,7 +71,7 @@
             "image_url": ["static/img/solo-realtor1.png", "static/img/solo-realtor0.png", "static/img/solo-realtor2.png", "static/img/solo-realtor3.png"]
         },
         {
-            "id": 2,
+            "id": 3,
             "project_name": "Full Stack React Workout-app",
             "description": "This web app is primarily made for mobile devices. A user can make an account with an email and 8-20 character password. The user can then sign in, create workouts, track sets, and enter in repetitions. Users can delete and update workouts/exercises as well. User passwords are encrypted with bcrypt. The API for this app is hosted on Heroku, the Postgres database is hosted on Neon, and the front of this app is hosted on Netlify.",
             "technologies": ["HTML5", "Tailwind CSS", "JavaScript", "Express JS", "Node Js", "PostgreSQL", "Sequelize", "React JS", "Context API", "React-Router-v5"],
@@ -71,7 +80,7 @@
             "image_url": ["static/img/IMG_4914.PNG", "static/img/IMG_4915.PNG", "static/img/IMG_4916.PNG", "static/img/IMG_4917.PNG", "static/img/IMG_4918.PNG", "static/img/IMG_4919.PNG", "static/img/IMG_4920.PNG", "static/img/IMG_4921.PNG", "static/img/IMG_4922.PNG", "static/img/IMG_4923.PNG", "static/img/IMG_4924.PNG", "static/img/IMG_4926.PNG", "static/img/IMG_4927.PNG", "static/img/IMG_4928.PNG", "static/img/IMG_4929.PNG"]
         },
         {
-            "id": 3,
+            "id": 4,
             "project_name": "Full Stack React Tasks/Notes App",
             "description": "This app was the first app I created after getting my tech degree from Treehouse. It is a CRUD app that users can track tasks in. A user can make an account with an email and 8-20 character password. The user can then sign in, create a task and then add in details such as a description, time, and date. Users can also edit and delete their tasks/to-dos. The API for this app is hosted on Heroku, the Postgres database is hosted on Neon, and the front of this app is hosted on Netlify.",
             "technologies": ["HTML5", "Tailwind CSS", "JavaScript", "Express JS", "Node Js", "PostgreSQL", "Sequelize", "React JS", "Context API"],
@@ -80,7 +89,7 @@
             "image_url": ["static/img/task0.png", "static/img/task1.png", "static/img/task2.png", "static/img/task3.png", "static/img/task4.png", "static/img/task5.png", "static/img/task6.png", "static/img/task7.png"]
         },
         {
-            "id": 4,
+            "id": 5,
             "project_name": "Interactive Form",
             "description": "This project is a web form that is responsive to user input in real time.",
             "technologies": ["HTML5", "CSS3", "JavaScript"],
@@ -89,7 +98,7 @@
             "image_url": ["static/img/intform1.png", "static/img/intform2.png"]
         },
         {
-            "id": 5,
+            "id": 6,
             "project_name": "Object Oriented Game Show",
             "description": "This project is made with ES6 object oriented programming, it allows the user to input letters with a mouse or keyboard to guess the letters of a random phrase.",
             "technologies": ["HTML5", "CSS3", "JavaScript"],
@@ -98,7 +107,7 @@
             "image_url": ["static/img/oopGame1.png", "static/img/oopGame2.png"]
         },
         {
-            "id": 6,
+            "id": 7,
             "project_name": "Color Guessing Game",
             "description": "This rgb color guessing game was inspired by a project from a course I took, however all of the code was written by me. To play the game, you must click the correct square color based off the CSS rgb color numbers at the top of the screen. The score is determined by the difference between the number of squares clicked and the total squares on the screen, depending on the selected game mode.",
             "technologies": ["HTML5", "CSS3", "JavaScript", "Node.js"],
