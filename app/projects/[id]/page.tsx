@@ -1,10 +1,62 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { getProjectById } from '@/data/projects';
+import { getProjectById, projects } from '@/data/projects';
 
 type PageProps = {
   params: { id: string };
 };
+
+export function generateStaticParams() {
+  return projects.map((project) => ({ id: String(project.id) }));
+}
+
+export function generateMetadata({ params }: PageProps): Metadata {
+  const projectId = Number(params.id);
+  const project = getProjectById(projectId);
+
+  if (!project) {
+    return {
+      title: 'Project Not Found',
+      robots: {
+        index: false,
+        follow: false
+      }
+    };
+  }
+
+  const description =
+    project.description ||
+    `Portfolio project by Terrance Ford: ${project.project_name}.`;
+  const firstImage = Array.isArray(project.image_url) ? project.image_url[0] : project.image_url;
+  const image = firstImage ? (firstImage.startsWith('/') ? firstImage : `/${firstImage}`) : '/static/img/side-image-no-smile-brighter.png';
+  const pagePath = `/projects/${project.id}`;
+
+  return {
+    title: `${project.project_name} Project`,
+    description,
+    alternates: {
+      canonical: pagePath
+    },
+    openGraph: {
+      title: `${project.project_name} | Terrance Ford`,
+      description,
+      url: pagePath,
+      images: [
+        {
+          url: image,
+          alt: project.project_name
+        }
+      ]
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${project.project_name} | Terrance Ford`,
+      description,
+      images: [image]
+    }
+  };
+}
 
 export default function ProjectDetailPage({ params }: PageProps) {
   const projectId = Number(params.id);

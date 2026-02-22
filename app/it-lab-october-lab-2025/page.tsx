@@ -1,5 +1,36 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { octoberLabImages } from '@/data/projects';
+
+const labDescription =
+  'Detailed IT networking lab by Terrance Ford covering Linux services, GLBP, DMVPN, IPsec, eBGP, OSPF, EIGRP, NAT, DNS, DHCP, and RADIUS.';
+
+export const metadata: Metadata = {
+  title: 'October Lab 2025',
+  description: labDescription,
+  alternates: {
+    canonical: '/it-lab-october-lab-2025'
+  },
+  openGraph: {
+    title: 'October Lab 2025 | Terrance Ford',
+    description: labDescription,
+    url: '/it-lab-october-lab-2025',
+    images: [
+      {
+        url: '/static/img/october-lab0.png',
+        width: 1200,
+        height: 630,
+        alt: 'October IT lab topology'
+      }
+    ]
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'October Lab 2025 | Terrance Ford',
+    description: labDescription,
+    images: ['/static/img/october-lab0.png']
+  }
+};
 
 const technologies = [
   'VLANs',

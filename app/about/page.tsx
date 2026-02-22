@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 
 const certs = [
@@ -12,6 +13,36 @@ const certs = [
 ];
 
 const skills = ['Cisco Networking', 'Technical Support', 'Identity and Access Management', 'Web Development', 'System Administration'];
+
+const aboutDescription =
+  'About Terrance Ford, IT professional in Raleigh, North Carolina with experience in technical support, system administration, and networking.';
+
+export const metadata: Metadata = {
+  title: 'About',
+  description: aboutDescription,
+  alternates: {
+    canonical: '/about'
+  },
+  openGraph: {
+    title: 'About Terrance Ford',
+    description: aboutDescription,
+    url: '/about',
+    images: [
+      {
+        url: '/static/img/side-image-arm-up-brighter.png',
+        width: 640,
+        height: 640,
+        alt: 'Terrance Ford portrait'
+      }
+    ]
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'About Terrance Ford',
+    description: aboutDescription,
+    images: ['/static/img/side-image-arm-up-brighter.png']
+  }
+};
 
 export default function AboutPage() {
   return (

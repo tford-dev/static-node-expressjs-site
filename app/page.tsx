@@ -1,6 +1,37 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import ProjectGrid from '@/components/ProjectGrid';
 import { octoberLabImages, projects } from '@/data/projects';
+
+const homeDescription =
+  'Portfolio website for Terrance Ford, IT professional in Raleigh, North Carolina featuring networking labs and full-stack projects.';
+
+export const metadata: Metadata = {
+  title: 'IT Professional Portfolio',
+  description: homeDescription,
+  alternates: {
+    canonical: '/'
+  },
+  openGraph: {
+    title: 'Terrance Ford | IT Professional Portfolio',
+    description: homeDescription,
+    url: '/',
+    images: [
+      {
+        url: '/static/img/side-image-no-smile-brighter.png',
+        width: 640,
+        height: 640,
+        alt: 'Terrance Ford portrait'
+      }
+    ]
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Terrance Ford | IT Professional Portfolio',
+    description: homeDescription,
+    images: ['/static/img/side-image-no-smile-brighter.png']
+  }
+};
 
 export default function HomePage() {
   const octoberCover = octoberLabImages[0] ? `/${octoberLabImages[0]}` : '/static/img/october-lab0.png';

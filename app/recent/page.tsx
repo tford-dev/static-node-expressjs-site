@@ -1,4 +1,35 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
+
+const recentDescription =
+  'Recent hands-on lab updates from Terrance Ford covering AI workflows, hybrid cloud networking, Linux services, and infrastructure experiments.';
+
+export const metadata: Metadata = {
+  title: 'Recent Work',
+  description: recentDescription,
+  alternates: {
+    canonical: '/recent'
+  },
+  openGraph: {
+    title: 'Recent Work | Terrance Ford',
+    description: recentDescription,
+    url: '/recent',
+    images: [
+      {
+        url: '/static/img/feb-lab-topology-kali-linux-2-8-26.png',
+        width: 1200,
+        height: 630,
+        alt: 'Hybrid cloud lab topology'
+      }
+    ]
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Recent Work | Terrance Ford',
+    description: recentDescription,
+    images: ['/static/img/feb-lab-topology-kali-linux-2-8-26.png']
+  }
+};
 
 export default function RecentPage() {
   return (
