@@ -1,5 +1,5 @@
 {
-  "/about/page": "app/about/page.js",
-  "/recent/page": "app/recent/page.js",
-  "/page": "app/page.js"
+  "/page": "app/page.js",
+  "/it-lab-april-lab-2026/page": "app/it-lab-april-lab-2026/page.js",
+  "/_not-found/page": "app/_not-found/page.js"
 }

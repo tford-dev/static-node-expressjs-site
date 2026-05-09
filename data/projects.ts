@@ -14,11 +14,13 @@ export type Project = {
 type PortfolioData = {
   projects: Project[];
   octoberLab?: { image_url?: string[] }[];
+  april2026Lab?: { image_url?: string[] }[];
 };
 
 const data = raw as PortfolioData;
 
 export const projects: Project[] = data.projects || [];
 export const octoberLabImages: string[] = data.octoberLab?.[0]?.image_url || [];
+export const april2026LabImages: string[] = data.april2026Lab?.[0]?.image_url || [];
 
 export const getProjectById = (id: number) => projects.find((p) => p.id === id);

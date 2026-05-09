@@ -42,6 +42,55 @@
         }
     ],
 
+    "april2026Lab": [
+        {
+            "image_url": [
+                "static/img/april-lab-img0.png",
+                "static/img/april-lab-img1.png",
+                "static/img/april-lab-img2.png",
+                "static/img/april-lab-img3.png",
+                "static/img/april-lab-img4.png",
+                "static/img/april-lab-img5.png",
+                "static/img/april-lab-img6.png",
+                "static/img/april-lab-img7.png",
+                "static/img/april-lab-img8.png",
+                "static/img/april-lab-img9.png",
+                "static/img/april-lab-img10.png",
+                "static/img/april-lab-img11.png",
+                "static/img/april-lab-img12.png",
+                "static/img/april-lab-img13.png",
+                "static/img/april-lab-img14.png",
+                "static/img/april-lab-img15.png",
+                "static/img/april-lab-img15.png",
+                "static/img/april-lab-img16.png",
+                "static/img/april-lab-img17.png",
+                "static/img/april-lab-img18.png",
+                "static/img/april-lab-img19.png",
+                "static/img/april-lab-img20.png",
+                "static/img/april-lab-img21.png",
+                "static/img/april-lab-img22.png",
+                "static/img/april-lab-img23.png",
+                "static/img/april-lab-img24.png",
+                "static/img/april-lab-img25.png",
+                "static/img/april-lab-img26.png",
+                "static/img/april-lab-img27.png",
+                "static/img/april-lab-img28.png",
+                "static/img/april-lab-img29.png",
+                "static/img/april-lab-img30.png",
+                "static/img/april-lab-img31.png",
+                "static/img/april-lab-img32.png",
+                "static/img/april-lab-img33.png",
+                "static/img/april-lab-img34.png",
+                "static/img/april-lab-img35.png",
+                "static/img/april-lab-img36.png",
+                "static/img/april-lab-img37.png",
+                "static/img/april-lab-img38.png",
+                "static/img/april-lab-img39.png",
+                "static/img/april-lab-img40.png"
+            ]
+        }
+    ],
+
     "projects": [
         {
             "id": 0,

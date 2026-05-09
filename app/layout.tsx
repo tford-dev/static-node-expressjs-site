@@ -70,9 +70,9 @@ export const metadata: Metadata = {
     ? { google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION }
     : undefined,
   icons: {
-    icon: '/static/img/favicon.ico',
-    shortcut: '/static/img/favicon.ico',
-    apple: '/static/img/favicon.ico'
+    icon: '/favicon.ico?v=1',
+    shortcut: '/favicon.ico?v=1',
+    apple: '/favicon.ico?v=1'
   },
   alternates: {
     canonical: '/'

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import ProjectGrid from '@/components/ProjectGrid';
-import { octoberLabImages, projects } from '@/data/projects';
+import { octoberLabImages, april2026LabImages, projects } from '@/data/projects';
 
 const homeDescription =
   'Portfolio website for Terrance Ford, IT professional in Raleigh, North Carolina featuring networking labs and full-stack projects.';
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
 
 export default function HomePage() {
   const octoberCover = octoberLabImages[0] ? `/${octoberLabImages[0]}` : '/static/img/october-lab0.png';
-
+  const april2026Cover = april2026LabImages[0] ? `/${april2026LabImages[0]}` : '/static/img/april-lab-img0.png';
   return (
     <div className="stack">
       <section className="hero">
@@ -93,9 +93,25 @@ export default function HomePage() {
         </div> */}
       </section>
 
+       <div className="section-header">
+        <div>
+          <h2>The April 2026 Lab (Linux, IPSEC, DNS, DHCP, SFTP, NAT, eBGP, OSPF)</h2>
+          <p className="section-description">Hands-on networking lab built with VMWare Workstation Pro, GNS3 server, and Cisco CML.</p>
+        </div>
+        <Link href="/it-lab-april-lab-2026" className="button secondary">
+          View lab story
+        </Link>
+      </div>
+      <div className="card">
+        <img src={april2026Cover} alt="April 2026 lab topology" loading="lazy" style={{ maxHeight: 360, objectFit: 'cover', width: '100%' }} />
+        <p className="section-description" style={{ marginTop: 12 }}>
+          Detailed IT networking lab covering network services on network devices and route manipulation
+        </p>
+      </div>
+
       <div className="section-header">
         <div>
-          <h2>The October Lab (Linux, GLBP, IPSEC, DMVPN, NAT, eBGP, OSPF, EIGRP)</h2>
+          <h2>The October 2025 Lab (Linux, GLBP, IPSEC, DMVPN, NAT, eBGP, OSPF, EIGRP)</h2>
           <p className="section-description">Hands-on networking lab built with VMWare Workstation Pro, GNS3 server, and Cisco CML.</p>
         </div>
         <Link href="/it-lab-october-lab-2025" className="button secondary">
